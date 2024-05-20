@@ -133,6 +133,7 @@ class CsvFileInterpreter extends AbstractInterpreter
 
         return new PreviewData($columns, $previewData, $readRecordNumber, $mappedColumns);
     }
+
     private function skipByteOrderMark($handle): void
     {
         $bom = fread($handle, strlen(self::UTF8_BOM));
